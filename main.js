@@ -44,7 +44,8 @@ document.getElementById("b_aleatorio").addEventListener("click", () => {
   }
 })
 
-document.getElementById("enlace_1").addEventListener("click", () => { 
+document.getElementById("enlace_1").addEventListener("click", (e) => { 
+  e.preventDefault();
   let upper = false;
   let lower = false;
   let string = prompt("Introduce una frase","Esta es una frase")
@@ -74,7 +75,8 @@ document.getElementById("enlace_1").addEventListener("click", () => {
   }
 })
 
-document.getElementById("enlace_2").addEventListener("click", () => {
+document.getElementById("enlace_2").addEventListener("click", (e) => {
+  e.preventDefault();
   let string = prompt("Introduce una frase","La ruta nos aporto otro paso natural")
   let palind = string.normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[,\s+]/g,"").toLowerCase();
   let check = false;
