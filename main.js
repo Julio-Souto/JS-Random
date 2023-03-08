@@ -78,7 +78,7 @@ document.getElementById("enlace_1").addEventListener("click", (e) => {
 document.getElementById("enlace_2").addEventListener("click", (e) => {
   e.preventDefault();
   let string = prompt("Introduce una frase","La ruta nos aporto otro paso natural")
-  let palind = string.normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[,\s+]/g,"").toLowerCase();
+  let palind = string.normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[,?.\s+]/g,"").toLowerCase();
   let check = false;
   let length=palind.length
   alert(palind)
